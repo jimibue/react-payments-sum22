@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     post 'users/:id/update_image', to:'users#update_image'
-
+    post 'users/update_image_auth', to:'users#update_image_auth'
   end
 end

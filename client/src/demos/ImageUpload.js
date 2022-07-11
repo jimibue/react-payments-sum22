@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { AuthContext } from "../providers/AuthProvider"
 import SingleImageUpload from "./SingleImageUpload"
+import SingleImageUploadAuthed from "./SingleImageUploadAuthed"
 
 
 
@@ -16,7 +17,10 @@ const ImageUpload = ()=>{
            <hr />
            <h1>DEMO of Just uploading a image... no other data</h1>
            <hr />
+           <h1>not authed given by id</h1>
            <SingleImageUpload id={user.id} setUser={setUser} />
+           <h1>authed</h1>
+           <SingleImageUploadAuthed/>
            
            <p>{JSON.stringify(user)}</p>
        </div>
