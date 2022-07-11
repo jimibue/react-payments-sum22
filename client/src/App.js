@@ -9,19 +9,22 @@ import UserAccount from "./components/shared/UserAccount";
 import FetchUser from "./components/auth/FetchUser";
 import Hooks from "./demos/Hooks";
 import reset from "styled-reset";
-import { normalize } from 'styled-normalize'
 
 import { createGlobalStyle } from "styled-components";
+import ImageUpload from "./demos/ImageUpload";
 
 const GlobalStyle = createGlobalStyle`
    ${reset}
+   a{
+     margin-right:10px;
+   }
 `;
 
 const App = () => (
   <>
     <GlobalStyle />
     <Navbar />
-    <>
+    <div style={{margin:'10px'}}>
       <FetchUser>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,11 +33,12 @@ const App = () => (
           <Route path="/register" element={<Register />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/account" element={<UserAccount />} />
+            <Route path="/image_upload" element={<ImageUpload />} />
           </Route>
           <Route path="/*" element={<NoMatch />} />
         </Routes>
       </FetchUser>
-    </>
+    </div>
   </>
 );
 

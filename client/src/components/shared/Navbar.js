@@ -11,6 +11,9 @@ const Navbar = () => {
           <Link to="/account">
             <li>Account</li>
           </Link>
+          <Link to="/image_upload">
+            <li>Image Upload Demo</li>
+          </Link>
           <li onClick={logout}>Logout</li>
         </>
       );
@@ -29,14 +32,15 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav>
-        <ul>
+      <nav style={{padding:'10px', border:'2px solid black'}}>
+        <ul style={{display:'flex', flexDirection:'row'}}>
           <Link to="/">
             <li>Home</li>
           </Link>
           <Link to="/hooks">
             <li>Hooks Demo</li>
           </Link>
+
           {renderNavItems()}
         </ul>
       </nav>

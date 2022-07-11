@@ -4,4 +4,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  namespace :api do
+    post 'users/:id/update_image', to:'users#update_image'
+
+  end
 end
