@@ -37,6 +37,9 @@ const Navbar = () => {
           <Link to="/">
             <li>Home</li>
           </Link>
+          <Link to="/braintree">
+            <li>Braintree</li>
+          </Link>
           <Link to="/hooks">
             <li>Hooks Demo</li>
           </Link>
