@@ -13,6 +13,7 @@ import reset from "styled-reset";
 import { createGlobalStyle } from "styled-components";
 import ImageUpload from "./demos/ImageUpload";
 import Braintree from "./demos/braintree/Braintree";
+import PaymentSuccess from "./demos/braintree/PaymentSucces";
 
 const GlobalStyle = createGlobalStyle`
    ${reset}
@@ -30,6 +31,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/braintree" element={<Braintree />} />
+          <Route path="/payment_success" element={<PaymentSuccess />} />
           <Route path="/hooks" element={<Hooks />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
